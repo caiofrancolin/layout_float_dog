@@ -323,7 +323,7 @@ h2 {
     width: 46%;
     margin-left: 2%;
     margin-right: 2%;
-    min-height: 190px;
+    min-height: 290px;
   }
 
   .col-4.col-4-color2 {
@@ -334,6 +334,10 @@ h2 {
   .col-1-2 {
     float: left;
     width: 21%;
+  }
+
+  .col-1-2 h2 {
+    font-size: 1em;
   }
   
   .col-3-1 {
@@ -364,5 +368,21 @@ h2 {
 
   .f-right {
     float: right;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .col-2-4 {
+    min-height: 220px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .col-1-2 h2 {
+    font-size: 2em;
+  }
+
+  .col-2-4 {
+    min-height: 185px;
   }
 }
