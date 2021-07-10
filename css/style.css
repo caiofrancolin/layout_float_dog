@@ -25,7 +25,11 @@ div img {
   width: 100%;
 }
 
-.row::after {
+.row::after,
+.col-2-4::after,
+.col-1-2::after,
+.col-4,
+.int-wrapper {
   content: "";
   display: table;
   clear: both;
@@ -36,6 +40,12 @@ h1.main-title {
   text-align: center;
   margin: 0;
   padding-top: 0.8em;
+}
+
+h2 {
+  margin: 0;
+  padding: 0.2em 0 0.2em 0.5em;
+  font-size: 2em;
 }
 
 .p-main-title {
@@ -56,6 +66,13 @@ h1.main-title {
   color: #fff;
 }
 
+.col-1-2,
+.col-3-1,
+.col-1-4,
+.col-4.col-4-color2 {
+  font-size: 1.125em;
+}
+
 .float-left-2,
 .float-left-1 {
   float: left;
@@ -73,41 +90,260 @@ h1.main-title {
   width: 60%;
 }
 
-.col-2-4::after {
-  content: "";
-  display: table;
-  clear: both;
+.img-header {
+  margin-left: 0.5em;
 }
 
 .col-2-4,
-.col-4 {
-  width: 94%;
-  margin-left: 3%;
-  margin-right: 3%;
+.col-4,
+.col-1-2,
+.col-3-1,
+.col-1-4 {
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
   min-height: 1px;
 }
 
-.col-4 {
+.col-1-2,
+.col-3-1,
+.col-1-4 {
+  padding-bottom: 0.8em;
+}
+
+.col-1-2 {
+  background-color: #818FFF;
+}
+
+.col-3-1 {
+  background-color: #BBC2FC;
+}
+
+.col-1-4 {
+  background-color: #B7D9ED;
+}
+
+.col-4-color1 {
   background-color: #5769FF;
+}
+
+.col-4-color2 {
+  background-color: #212075;
+  color: #fff;
+}
+
+.col-1-2 img {
+  width: 80%;
+  padding-left: 0.8em;
+}
+
+.col-3-1 img {
+  width: 60%;
+  padding-left: 0.8em;
+}
+
+.col-1-4 img {
+  width: 50%;
+  padding-left: 0.8em;
+}
+
+.col-1-2 p {
+  width: 80%;
+  text-align: center;
+  padding-left: 0.8em;
+}
+
+.col-3-1 p,
+.col-1-4 p {
+  width: 98%;
+  padding-left: 0.8em;
+  text-align: left;
+}
+
+.col-4.col-4-color1 {
   padding-top: 3em;
+  padding-bottom: 0.7em;
+}
+
+.col-4.col-4-color2 {
+  padding-top: 1em;
+  padding-bottom: 0.7em;
+}
+
+.col-4.col-4-color2 img {
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+
+.col-4.col-4-color2 p {
+  text-align: left;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.center {
+  text-align: center;
 }
 
 .col-4 img {
-  border-radius: 30px;
   display: block;
   margin: 0 auto;
   width: 50%;  
 }
 
+.border-round {
+  border-radius: 30px;
+}
+
 .p-center {
   text-align: center;
   font-size: 1.5em;
-  margin: 1em 3em 0.8em 3em;
+  padding-bottom: 0.4em;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
+.footer {
+  background-color: #1456FF;
+  color: #fff;
+  min-height: 60px;
+}
+
+.footer p {
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* tela a partir de 480px */
+@media only screen and (min-width: 480px) {
+  .p-main-title-2 {
+    font-size: 0.875em;
+  }
+
+  .col-1-2 {
+    float: left;
+    width: 46%;
+  }
+
+  .col-1-2 img,
+  .col-1-2 p {
+    width: 95%;
+  }
+
+  .col-4.col-4-color2 img {
+    width: 50%;
+    max-width: 250px;
+    float: right;
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+  
+  .col-4.col-4-color2 p {
+    width: 50%;
+    text-align: center;
+    padding-top: 1em;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .footer p {
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .p-center {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* tela a partir de 720px */
 @media only screen and (min-width: 720px) {
+  .p-main-title {
+    margin: 0.5em;
+  }
+
+  .p-main-title-2 {
+    font-size: 0.75em;
+    margin-top: 1em; 
+  }
+
+  .img-header {
+    margin-top: 0.5em;
+  }
+
+  .float-left-1 {
+    width: 50%;
+  }
+  
+  .float-left-1 img {
+    margin-bottom: 0.2em;
+  }
+
+  .col-1-4 img {
+    width: 95%;
+  }
+  
+  .float-left-2 {
+    width: 50%;
+  }
+
+  .col-4.col-4-color1 img {
+    width: 48%;
+  }
+
+  .p-center {
+    font-size: 3em;
+    margin: 0.1em 3em 0.2em 3em;
+  }
+  
+  .col-4.col-4-color2 p {
+    width: 100%;
+  }
+
+  .col-2-4,
+  .col-4,
+  .col-1-2,
+  .col-3-1,
+  .col-1-4 {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
   .col-2-4 {
     width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    min-height: 190px;
+  }
+
+  .col-1-2 {
+    float: left;
+    width: 23%;
+  }
+  
+  .col-3-1 {
+    float: left;
+    width: 73%;
+  }
+
+  .col-3-1 img {
+    width: 41.2%;
+  }
+
+  .col-3-1 p {
+    text-align: left;
+  }
+
+  .col-1-4 {
+    float: left;
+    width: 23%;
+  }
+
+  .col-4 {
+    width: 98%;
   }
 
   .f-left {
